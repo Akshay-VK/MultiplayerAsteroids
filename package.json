@@ -1,0 +1,19 @@
+{
+  "name": "multiplayerasteroids",
+  "version": "1.0.0",
+  "description": "a multiplayer version of asteroids(ish)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akshay-VK/MultiplayerAsteroids.git"
+  },
+  "author": "Akshay-VK",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Akshay-VK/MultiplayerAsteroids/issues"
+  },
+  "homepage": "https://github.com/Akshay-VK/MultiplayerAsteroids#readme"
+}
