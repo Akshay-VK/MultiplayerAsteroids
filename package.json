@@ -2,6 +2,7 @@
   "name": "multiplayerasteroids",
   "version": "1.0.0",
   "description": "a multiplayer version of asteroids(ish)",
+  "type":"module",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Akshay-VK/MultiplayerAsteroids/issues"
   },
-  "homepage": "https://github.com/Akshay-VK/MultiplayerAsteroids#readme"
+  "homepage": "https://github.com/Akshay-VK/MultiplayerAsteroids#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.3.1"
+  }
 }
