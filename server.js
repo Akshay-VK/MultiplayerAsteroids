@@ -8,7 +8,10 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, { /* options */ });
 
 io.on("connection", (socket) => {
-  // ...
+  console.log(socket.id);
+  socket.on("ping", (arg) => {
+    console.log(arg); // world
+  });
 });
 
 httpServer.listen(process.env.port||3000);
