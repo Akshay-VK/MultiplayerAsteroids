@@ -13,7 +13,12 @@ io.on("connection", (socket) => {
     console.log(arg); // world
   });
   socket.on("init",(arg)=>{
-    io.to(socket.id).emit("init-ripple",{x:Math.floor(Math.random()*400-200),y:Math.floor(Math.random()*400-200)});
+    io.to(socket.id).emit("init-ripple",{
+      x:Math.floor(Math.random()*400-200),
+      y:Math.floor(Math.random()*400-200),
+      dirX:1,
+      dirY:0
+    });
   });
 });
 
