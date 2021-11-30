@@ -20,6 +20,9 @@ io.on("connection", (socket) => {
       dirY:0
     });
   });
+  socket.on("beat",(arg)=>{
+    //
+  });
 });
 
 httpServer.listen(process.env.port||3000);
