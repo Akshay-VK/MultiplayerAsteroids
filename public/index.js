@@ -9,11 +9,11 @@ function setup(){
     socket.emit("init",{});
     socket.once("init-ripple",(arg)=>{
         console.log(arg);
-        player = new Player(socket, createVector(arg.x,arg.y),createVector(arg.dx,arg.dy));
-        console.log(player);
-        drawable=true;
         gameW=arg.width;
         gameH=arg.height;
+        player = new Player(socket, createVector(arg.x,arg.y),createVector(arg.dx,arg.dy),gameW,gameH);
+        console.log(player);
+        drawable=true;
     });
     createCanvas(400,400);
 
@@ -26,4 +26,4 @@ function draw(){
         player.ping();
     }
 }
-socket.on("update-ripple",player.drawOthers);
+socket.on("update-ripple",(arg)=>{if(drawable){player.drawOthers(arg);}});

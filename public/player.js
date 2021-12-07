@@ -1,9 +1,11 @@
 class Player {
-  constructor(socket, pos, dir) {
+  constructor(socket, pos, dir,w,h) {
     this.skt = socket;
     this.pos = pos;
     this.dir = dir;
     this.angle = 0;
+    this.w=w;
+    this.h=h;
   }
   update() {
     angleMode(DEGREES);
@@ -16,6 +18,9 @@ class Player {
     this.dir.x = cos(this.angle);
     this.dir.y = sin(this.angle);
     this.pos.add(this.dir);
+    
+    this.pos.x = Math.max(Math.min(this.pos.x,this.w/2),-this.w/2);
+    this.pos.y = Math.max(Math.min(this.pos.y,this.h/2),-this.h/2);
     
   }
   show() {
