@@ -25,7 +25,12 @@ function draw(){
         player.show();
         player.ping();
         player.drawOthers();
-        console.log(1);
+        rectMode(CENTER);
+        noFill();
+        strokeWeight(2);
+        stroke(0,255,0);
+        rect(-player.pos.x+(width/2),-player.pos.y+(height/2),gameW,gameH);
+        rectMode(CORNER);
     }
 }
 socket.on("update-ripple",(arg)=>{if(drawable){player.updateState(arg);}});
